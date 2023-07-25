@@ -1,3 +1,5 @@
+const bcrypt = require("bcryptjs");
+
 module.exports = (sequelize, Model, DataTypes) => {
   class User extends Model {}
 
@@ -24,11 +26,27 @@ module.exports = (sequelize, Model, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      //I want that the only options to put in the field "role" be root, user and admin
+
+      role: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: "student",
+        validate: {
+          isIn: [["admin", "teacher", "student"]],
+        },
+      },
     },
     {
+      hooks: {
+        beforeCreate: async (user) => {
+          user.password = await bcrypt.hash(user.password, 10);
+        },
+      },
       sequelize,
       modelName: "user",
     }
   );
+
   return User;
 };
