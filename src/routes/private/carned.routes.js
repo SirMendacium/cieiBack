@@ -1,10 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const { carnedController } = require("../../controllers");
-//const { validatorMiddlewareBuilder } = require("../../middlewares/validator");
-//const userValidations = require("../../validations/user.validations");
+const { carnedController, userController } = require("../../controllers");
+const { validatorMiddlewareBuilder } = require("../../middlewares/validator");
+const carnedValidations = require("../../validations/carned.validations");
 const { checkRoleAuth } = require("../../middlewares/roleAuth");
 
-router.post("/", checkRoleAuth("profesor"), carnedController.create);
-
+router.post(
+  "/",
+  validatorMiddlewareBuilder(carnedValidations.createCarned),
+  carnedController.create
+);
+router.get("/", carnedController.getAll);
+router.get("/myCarned", userController.getMyCarned);
 module.exports = router;

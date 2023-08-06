@@ -11,8 +11,10 @@ const sequelize = new Sequelize(
 );
 
 const User = require("./user.model")(sequelize, Model, DataTypes);
+const Carned = require("./carned.model")(sequelize, Model, DataTypes);
 
 module.exports = {
   sequelize,
   User,
+  Carned,
 };

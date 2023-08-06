@@ -1,0 +1,95 @@
+[
+    {
+        "_id": "8ea37a5d-5fc2-4ef0-bd85-28d8833071b2",
+        "colId": "history",
+        "containerId": "",
+        "name": "localhost:3000/users/",
+        "url": "localhost:3000/users/",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-01T11:25:38.000Z",
+        "modified": "2023-08-01T11:25:38.000Z",
+        "headers": [],
+        "params": [],
+        "tests": []
+    },
+    {
+        "_id": "d1924191-2274-48a6-9ee3-2d4cdaed2f5d",
+        "colId": "history",
+        "containerId": "",
+        "name": "localhost:3000/users/",
+        "url": "localhost:3000/users/",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-08-01T11:25:47.018Z",
+        "modified": "2023-08-01T11:25:47.018Z",
+        "headers": [],
+        "params": [],
+        "tests": []
+    },
+    {
+        "_id": "44ff223b-6f3f-40b5-83ff-324f8b004618",
+        "colId": "history",
+        "containerId": "",
+        "name": "localhost:3000/users/signup",
+        "url": "localhost:3000/users/signup",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-08-01T11:27:54.497Z",
+        "modified": "2023-08-01T11:39:36.558Z",
+        "headers": [],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": " {\n      \"email\": \"field@a.com\",\n      \"firstname\": \"El lastname es requerido\",\n      \"lastname\": \"lastname\",\n      \"password\": \"body\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "0afa519b-5665-4578-9fe4-0ccb6cbbaa8f",
+        "colId": "history",
+        "containerId": "",
+        "name": "localhost:3000/users/login",
+        "url": "localhost:3000/carned/myCarned",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-01T11:39:17.949Z",
+        "modified": "2023-08-01T12:01:21.114Z",
+        "headers": [],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": " {\n      \"score\": 1,\n      \"student\": \"María Pérez\",\n      \"subject\": \"Matematica\",\n      \"text\": \"sadasdasd\",\n      \"teacher\": \"shajar\"\n}",
+            "form": []
+        },
+        "auth": {
+            "type": "bearer",
+            "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY5MDg5MDUwNn0.Xk9AuiKfXI5UlXFVbe4IQZ6P0WDUfhVznL9io8iH98U"
+        },
+        "tests": []
+    },
+    {
+        "_id": "86172b0f-2d30-43af-bd8f-7c00f3d4b4de",
+        "colId": "history",
+        "containerId": "",
+        "name": "localhost:3000/carned",
+        "url": "localhost:3000/carned",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-08-01T11:39:58.598Z",
+        "modified": "2023-08-01T11:39:58.598Z",
+        "headers": [],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": " {\n      \"email\": \"field@a.com\",\n      \"firstname\": \"El lastname es requerido\",\n      \"lastname\": \"lastname\",\n      \"password\": \"body\"\n}",
+            "form": []
+        },
+        "auth": {
+            "type": "bearer",
+            "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImlhdCI6MTY5MDg4OTk3Nn0.0NpFg0v9FQAOYLQvKpOU4ttxKnzVZjVOpsJG0pQORlM"
+        },
+        "tests": []
+    }
+]

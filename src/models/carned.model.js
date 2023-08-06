@@ -1,7 +1,7 @@
 module.exports = (sequelize, Model, DataTypes) => {
-  class User extends Model {}
+  class Carned extends Model {}
 
-  User.init(
+  Carned.init(
     {
       id: {
         type: DataTypes.BIGINT,
@@ -16,7 +16,7 @@ module.exports = (sequelize, Model, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      alumn: {
+      student: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -27,9 +27,9 @@ module.exports = (sequelize, Model, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "user",
+      modelName: "carned",
     }
   );
 
-  return User;
+  return Carned;
 };

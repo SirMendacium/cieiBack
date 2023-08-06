@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Carned } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -79,6 +79,30 @@ module.exports = {
       if (!user) {
         res.send(403);
       }
+      res.status(200);
+    } catch (err) {
+      next(err);
+    }
+  },
+  getMyCarned: async (req, res, next) => {
+    try {
+      const token = req.headers.authorization.substr(
+        req.headers.authorization.indexOf(" ") + 1
+      );
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+      const user = await User.findOne({
+        where: {
+          id: decoded,
+        },
+      });
+      console.log(user);
+      const carned = await Carned.findOne({
+        where: {
+          student: user.firstname + " " + user.lastname,
+        },
+      });
+      res.json(user);
       res.status(200);
     } catch (err) {
       next(err);

@@ -19,7 +19,7 @@ module.exports = async () => {
   users.push({
     firstname: "María",
     lastname: "Pérez",
-    email: "root@gmail.com",
+    email: "roo1t@gmail.com",
     password: await hashPassword("root"),
     role: "student",
   });
