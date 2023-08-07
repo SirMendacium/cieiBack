@@ -6,13 +6,16 @@ const routes = require("./routes");
 const { sequelize } = require("./models");
 const morgan = require("morgan");
 const errorHandler = require("./middlewares/errorHandler");
+const cors = require("cors");
 
-sequelize.sync({ force: true }).then(async () => {
+sequelize.sync({ force: false }).then(async () => {
   await require("./seeders")();
 });
+
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 app.use(routes);
 app.use(errorHandler);
 
