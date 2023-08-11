@@ -1,10 +1,17 @@
-const { Carned } = require("../models");
+const { Carned, User } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 module.exports = {
   create: async (req, res, next) => {
     try {
+      console.log(req.body.student.split("1"));
+      const student = await User.findOne({
+        where: {
+          name: req.body.student,
+        },
+      });
+      console.log(student);
       const carned = await Carned.create({
         subject: req.body.subject,
         teacher: req.body.teacher,

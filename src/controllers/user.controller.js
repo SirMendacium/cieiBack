@@ -90,10 +90,10 @@ module.exports = {
         req.headers.authorization.indexOf(" ") + 1
       );
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
+      console.log(decoded.sub);
       const user = await User.findOne({
         where: {
-          id: decoded,
+          id: decoded.sub,
         },
       });
       console.log(user);
@@ -102,7 +102,7 @@ module.exports = {
           student: user.firstname + " " + user.lastname,
         },
       });
-      res.json(user);
+      res.json(carned);
       res.status(200);
     } catch (err) {
       next(err);
