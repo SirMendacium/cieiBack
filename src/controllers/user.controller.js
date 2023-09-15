@@ -89,19 +89,21 @@ module.exports = {
       const token = req.headers.authorization.substr(
         req.headers.authorization.indexOf(" ") + 1
       );
+
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      console.log(decoded.sub);
+      console.log(decoded);
       const user = await User.findOne({
         where: {
           id: decoded.sub,
         },
       });
       console.log(user);
-      const carned = await Carned.findOne({
+      const carned = await Carned.findAll({
         where: {
           student: user.firstname + " " + user.lastname,
         },
       });
+      console.log(carned);
       res.json(carned);
       res.status(200);
     } catch (err) {

@@ -1,17 +1,24 @@
 const { Carned } = require("../models");
-const bcrypt = require("bcryptjs");
 
 module.exports = async () => {
   const carneds = [];
 
   carneds.push({
-    subject: "Matematica",
-    score: 2,
+    subject: "Math",
+    score: 1,
     student: "María Pérez",
-    text: "Muy mal estudiante",
+    text: "asd",
+    createdAt: new Date("08-06-2020"),
+  });
+
+  carneds.push({
+    subject: "asdasd",
+    score: 1,
+    student: "María Pérez",
+    text: "asd",
   });
 
   await Carned.bulkCreate(carneds);
 
-  console.log("[Database] Se corrió el seeder de Carned.");
+  console.log("[Database] Se corrió el seeder de Carneds.");
 };
