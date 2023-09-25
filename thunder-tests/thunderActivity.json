@@ -32,17 +32,21 @@
         "colId": "history",
         "containerId": "",
         "name": "localhost:3000/users/signup",
-        "url": "localhost:3000/users/signup",
-        "method": "POST",
+        "url": "localhost:3000/carned/myCarned",
+        "method": "GET",
         "sortNum": 0,
         "created": "2023-08-01T11:27:54.497Z",
-        "modified": "2023-08-01T11:39:36.558Z",
+        "modified": "2023-08-11T11:17:47.845Z",
         "headers": [],
         "params": [],
         "body": {
             "type": "json",
-            "raw": " {\n      \"email\": \"field@a.com\",\n      \"firstname\": \"El lastname es requerido\",\n      \"lastname\": \"lastname\",\n      \"password\": \"body\"\n}",
+            "raw": " {\n      \"email\": \"root@gmail.com\",\n      \"firstname\": \"María\",\n      \"lastname\": \"lastname\",\n      \"password\": \"root\"\n}",
             "form": []
+        },
+        "auth": {
+            "type": "bearer",
+            "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY5MTc1MjY0M30.2DNkUhMTWa91pdmSQB4HcvOdnJlpRqKXiVgSU3xEuUw"
         },
         "tests": []
     },
@@ -51,21 +55,21 @@
         "colId": "history",
         "containerId": "",
         "name": "localhost:3000/users/login",
-        "url": "localhost:3000/carned/myCarned",
+        "url": "localhost:3000/user/login",
         "method": "GET",
         "sortNum": 0,
         "created": "2023-08-01T11:39:17.949Z",
-        "modified": "2023-08-01T12:01:21.114Z",
+        "modified": "2023-08-11T11:18:36.082Z",
         "headers": [],
         "params": [],
         "body": {
             "type": "json",
-            "raw": " {\n      \"score\": 1,\n      \"student\": \"María Pérez\",\n      \"subject\": \"Matematica\",\n      \"text\": \"sadasdasd\",\n      \"teacher\": \"shajar\"\n}",
+            "raw": " {\n  \"score\": 1,\n  \"student\": \"María Pérez\",\n  \"text\": \"asdas\",\n  \"subject\": \"ads\"\n}",
             "form": []
         },
         "auth": {
             "type": "bearer",
-            "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY5MDg5MDUwNn0.Xk9AuiKfXI5UlXFVbe4IQZ6P0WDUfhVznL9io8iH98U"
+            "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY5MTQ5MjgwN30.2qbmkvvrb6A7OtDNSsul52jLOhgXeV6dG7lqW_lo5Qw"
         },
         "tests": []
     },

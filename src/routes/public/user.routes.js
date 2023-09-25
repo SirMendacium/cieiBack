@@ -9,6 +9,10 @@ router.post(
   validatorMiddlewareBuilder(userValidations.createUser),
   userController.register
 );
-router.post("/login", userController.login);
+router.post(
+  "/login",
+  validatorMiddlewareBuilder(userValidations.login),
+  userController.login
+);
 
 module.exports = router;
