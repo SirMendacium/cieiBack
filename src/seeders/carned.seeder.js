@@ -12,6 +12,14 @@ module.exports = async () => {
   });
 
   carneds.push({
+    subject: "Fisica",
+    score: 1,
+    student: "María Pérez",
+    text: "asd",
+    createdAt: new Date("08-06-2020"),
+  });
+
+  carneds.push({
     subject: "asdasd",
     score: 1,
     student: "María Pérez",
