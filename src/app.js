@@ -8,7 +8,7 @@ const morgan = require("morgan");
 const errorHandler = require("./middlewares/errorHandler");
 const cors = require("cors");
 
-sequelize.sync({ force: false }).then(async () => {
+sequelize.sync({ force: true }).then(async () => {
   await require("./seeders")();
 });
 
