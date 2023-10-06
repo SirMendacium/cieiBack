@@ -6,5 +6,5 @@ const { validatorMiddlewareBuilder } = require("../../middlewares/validator");
 //const { checkRoleAuth } = require("../../middlewares/roleAuth");
 
 router.delete("/", userController.delete);
-
+router.get("/imAProfessor", userController.imAProfessor);
 module.exports = router;

@@ -110,4 +110,23 @@ module.exports = {
       next(err);
     }
   },
+
+  imAProfessor: async (req, res, next) => {
+    try {
+      const token = req.headers.authorization.substr(
+        req.headers.authorization.indexOf(" ") + 1
+      );
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      console.log("The token is " + decoded.sub);
+      const user = await User.findByPk(parseInt(decoded.sub));
+      console.log("And the user is " + user.role);
+      if (user.role === "teacher") {
+        res.status(200).json({});
+      } else {
+        res.status(401).json({});
+      }
+    } catch (err) {
+      next(err);
+    }
+  },
 };
